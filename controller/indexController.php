@@ -14,7 +14,10 @@
         $hash = setHash($mail, $pseudo);
         
         $return = false;
-        //enregistrment en base
+        
+        $dbh = new PDO('mysql:host=localhost;dbname=sortiepartie', 'root', '');
+
+
         if($return)
             setcookie("sortiepartieuser", $hash, time()+2592000);
 
